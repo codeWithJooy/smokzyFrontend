@@ -1,0 +1,205 @@
+/* Dashboard.css */
+.dashboardSection {
+    padding: 20px 10px;
+  }
+  
+  .statsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .statCard {
+    background: #f9f7f3;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #eddea4;
+  }
+  .statIcon{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .statIcon img{
+    height:40px;
+    width:40px;
+  }
+  .statText p{
+    font-size: 20px;
+    font-weight:bold;
+    color:#0fa3b1!important;
+  }
+  .statHeader{
+    font-size: 15px;
+    font-weight: bold;
+    color:#f7a072;
+  }
+  .statCard h3 {
+    color: #0fa3b1;
+    margin-bottom: 10px;
+  }
+
+  
+  /* AllOrders.css */
+  .ordersSection {
+    padding: 20px 10px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input, .filters select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid #eddea4;
+  }
+  
+  .ordersList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .orderCard {
+    background: #f9f7f3;
+    border-radius: 15px;
+    padding: 15px;
+    border: 1px solid #eddea4;
+  }
+  
+  .orderHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .status {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+  
+  .status.pending {
+    background: #ffd70033;
+    color: #ffd700;
+  }
+  
+  .viewButton {
+    background: #0fa3b1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  /* OrderDetails.css */
+  .detailsCard {
+    background: #f9f7f3;
+    border-radius: 15px;
+    padding: 20px;
+    border: 1px solid #eddea4;
+  }
+  
+  .detailRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #eddeaa;
+  }
+  
+  .statusSelect {
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid #0fa3b1;
+  }
+  
+  .checklistSection {
+    margin-top: 20px;
+  }
+  
+  .checklistItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .actionButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .saveButton {
+    background: #0fa3b1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+  
+  .cancelButton {
+    background: #f9f7f3;
+    color: #0fa3b1;
+    border: 1px solid #0fa3b1;
+    padding: 10px 20px;
+    border-radius: 15px;
+  }
+
+  .quickActions{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 40px;
+  }
+  .quickHeader{
+    width:100%;
+    text-align: center;
+  }
+  .quickHeader p{
+    font-size: 35px;
+    font-weight: bold;
+    color:#f7a072;
+  }
+  .actionButton{
+    width:40%;
+    height:80px;
+    padding: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #f7a072;
+    margin-bottom: 20px;
+  }
+  .actionImage{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  .actionImage img{
+    height:20px;
+    width:20px;
+  }
+  .actionText{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .actionText p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #0fa3b1;
+  }

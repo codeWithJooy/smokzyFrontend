@@ -1,0 +1,71 @@
+/* OrderDetails.css */
+.detailsSection {
+    padding: 20px 10px;
+  }
+  
+  .statusHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eddea4;
+  }
+  
+  .statusBadge span {
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  .paymentStatus {
+    background: #27ae6033;
+    color: #27ae60;
+  }
+  
+  .orderStatus {
+    background: #0fa3b133;
+    color: #0fa3b1;
+  }
+  
+  .staticText {
+    background: #f9f7f3;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eddea4;
+  }
+  
+  .staticText p {
+    margin: 0;
+    color: #2d3047;
+  }
+  
+  .itemsSection h3,
+  .employeesSection h3 {
+    color: #0fa3b1;
+    margin: 20px 0 15px;
+  }
+  
+  .flavorTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .flavorTag {
+    background: #eddea4;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+  }
+  
+  .partyDetails {
+    background: #f9f7f3;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+    border: 1px solid #eddea4;
+  }
+  
+  /* Maintain existing styles from CreateOrder.css */

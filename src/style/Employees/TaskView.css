@@ -1,0 +1,152 @@
+/* src/style/Employees/TaskView.css */
+.taskContainer {
+    padding: 20px;
+  }
+  
+  .taskHeader {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .taskFilters {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .filterButton {
+    padding: 8px 15px;
+    border: 1px solid #eddea4;
+    border-radius: 15px;
+    background: white;
+    color: #2d3047;
+  }
+  
+  .filterButton.active {
+    background: #0fa3b1;
+    color: white;
+    border-color: #0fa3b1;
+  }
+  
+  .taskStats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .statCard {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #eddea4;
+  }
+  
+  .statCard h3 {
+    color: #0fa3b1;
+    margin-bottom: 10px;
+  }
+  
+  .statCard p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f7a072;
+  }
+  
+  .taskList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .taskCard {
+    background: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    border-left: 4px solid;
+    margin-bottom: 10px;
+  }
+  
+  .taskCard.preparation { border-color: #0fa3b1; }
+  .taskCard.delivery { border-color: #27ae60; }
+  .taskCard.collection { border-color: #f39c12; }
+  
+  .taskMeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .taskOrder{
+    width:50%;
+  }
+  .taskOrderMain{
+    color:#f7a072;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .taskType {
+    background: #eddea4;
+    color:#f7a072;
+    padding: 4px 8px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .dueDate {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .taskDetails p {
+    margin: 8px 0;
+    color: #444;
+  }
+  
+  .taskFooter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  .statusBadge {
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .statusBadge.pending { background: #ffd70033; color: #cc9900; }
+  .statusBadge.in-progress { background: #0fa3b133; color: #0fa3b1; }
+  .statusBadge.completed { background: #27ae6033; color: #27ae60; }
+  
+  .taskActions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    width:100%;
+  }
+  
+  .taskButton {
+    border: none;
+    width:40%;
+    height:50px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .taskButton.start {
+    background: #0fa3b1;
+    color: white;
+  }
+  
+  .taskButton.complete {
+    background: #27ae60;
+    color: white;
+  }

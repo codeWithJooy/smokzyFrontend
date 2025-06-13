@@ -1,0 +1,137 @@
+/* AllOrders.css (updated) */
+.ordersSection {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filtersSection {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 25px;
+  
+}
+.searchInput{
+  width:100%
+}
+.statusFilter {
+  width:40%!important;
+
+}
+
+.ordersList {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.orderCard {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #eddea4;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.orderCard:hover {
+  transform: translateY(-3px);
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f9f7f3;
+}
+
+.orderMeta {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderId {
+  font-weight: 600;
+  color: #2d3047;
+  font-size: 1.1rem;
+}
+
+.orderDate {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orderDetails {
+  line-height: 1.6;
+}
+
+.orderDetails p {
+  margin: 8px 0;
+  color: #444;
+}
+
+.orderDetails strong {
+  color: #2d3047;
+}
+
+.orderActions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.viewButton,
+.editButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.viewButton {
+  background: #0fa3b1;
+  color: white;
+  border: none;
+}
+
+.editButton {
+  background: #eddea4;
+  color: #2d3047;
+  border: 1px solid #e0d19a;
+}
+
+.viewButton:hover,
+.editButton:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .ordersList {
+    grid-template-columns: 1fr;
+  }
+  
+  .filters {
+    flex-direction: column;
+  }
+  
+  .searchInput,
+  .statusFilter {
+    width: 100%;
+    flex: none;
+  }
+}
