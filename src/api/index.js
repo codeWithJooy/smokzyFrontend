@@ -7,7 +7,7 @@ const devApis = {
   ORDER_API: "http://localhost:5000/api/order",
 };
 const prodApis = {
-  AUTH_API: `${val}/api/settings`,
+  AUTH_API: `${val}/api/auth`,
   USER_API: `${val}/api/user`,
   CUSTOMER_API: `${val}/api/customer`,
   ORDER_API: `${val}/api/order`,
