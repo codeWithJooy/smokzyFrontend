@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/Footer/Footer";
 import "../../style/global.css";
 import "../../style/Orders/CreateOrder.css";
+import { useHistory } from "react-router-dom";
 import { getAllCustomers } from "../../redux/action/customerAction";
 import { getUsers } from "../../redux/action/userAction";
 import { addOrder } from "../../redux/action/orderAction";
 
 const CreateOrder = () => {
+  const history=useHistory();
+
   // Navigation state
   const [orderStage, setOrderStage] = useState(1);
   
@@ -132,9 +135,11 @@ const CreateOrder = () => {
       const res=await addOrder(orderData)
       if(res){
         alert("Customer Added Successfully.")
+        history.push("/orders")
       }
     } catch (error) {
       console.error("Error creating order:", error);
+      history.push("/dashboard")
       // Show error message to user
     }
   };

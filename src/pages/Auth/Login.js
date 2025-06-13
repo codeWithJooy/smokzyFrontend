@@ -15,7 +15,11 @@ const Login = () => {
     e.preventDefault();
     let res=await login(formData)
     if(res){
-      history.push("/dashboard")
+      if(res.role==='Admin'){
+          history.push("/dashboard")
+      }else{
+        history.push("/employeetask")
+      }
     }
   };
 

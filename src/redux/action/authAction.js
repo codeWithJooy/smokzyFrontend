@@ -20,7 +20,7 @@ export const login = async (formData) => {
     let headers = getHeaders();
     const response = await authApi.post("/login", formData, headers);
     if (response.data.code == 200) {
-      return true;
+      return response.data.user;
     } else {
       return false;
     }

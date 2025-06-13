@@ -3,8 +3,11 @@ import "../../style/global.css";
 import "../../style/dashboard.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { useHistory } from "react-router-dom";
+
 
 const Dashboard = () => {
+  const history=useHistory();
   return (
     <div className="main">
       <Header title={"Dashboard"}/>
@@ -43,7 +46,7 @@ const Dashboard = () => {
           <div className="quickHeader">
             <p>Quick Actions</p>
           </div>
-          <div className="actionButton">
+          <div className="actionButton" onClick={()=>history.push("/create")}>
             <div className="actionImage">
               <img src="assets/dashboard/completed.png" />
             </div>
@@ -51,7 +54,7 @@ const Dashboard = () => {
               <p>New Order</p>
             </div>
           </div>
-          <div className="actionButton">
+          <div className="actionButton" onClick={()=>history.push("/orders")}>
             <div className="actionImage">
               <img src="assets/dashboard/completed.png" />
             </div>
@@ -59,20 +62,20 @@ const Dashboard = () => {
               <p>All Orders</p>
             </div>
           </div>
-          <div className="actionButton">
+          <div className="actionButton" onClick={()=>history.push("/employees")}>
             <div className="actionImage">
               <img src="assets/dashboard/completed.png" />
             </div>
             <div className="actionText">
-              <p>Analytics</p>
+              <p>Users</p>
             </div>
           </div>
-          <div className="actionButton">
+          <div className="actionButton" onClick={()=>history.push("/orders")}>
             <div className="actionImage">
               <img src="assets/dashboard/completed.png" />
             </div>
             <div className="actionText">
-              <p>Invoices</p>
+              <p>Customers</p>
             </div>
           </div>
         </div>
