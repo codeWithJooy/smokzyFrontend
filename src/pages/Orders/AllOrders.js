@@ -1,11 +1,13 @@
 // AllOrders.js (updated)
-import React from "react";
+import React, { useState,useEffect } from "react";
 import "../../style/global.css";
 import "../../style/Orders/AllOrders.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { getAllOrder } from "../../redux/action/orderAction";
 
 const AllOrders = () => {
+  const [allOrders,setAllOrders]=useEffect([])
   // Sample orders with different statuses
   const orders = [
     {
@@ -14,7 +16,7 @@ const AllOrders = () => {
       items: "2 Hookah Pots, Mint Flavor",
       status: "pending",
       date: "2023-08-15",
-      address: "123 Main Street, Mumbai"
+      address: "123 Main Street, Mumbai",
     },
     {
       id: 12346,
@@ -22,7 +24,7 @@ const AllOrders = () => {
       items: "5 Hookah Pots, Grape Flavor",
       status: "preparing",
       date: "2023-08-14",
-      address: "456 Business Road, Delhi"
+      address: "456 Business Road, Delhi",
     },
     {
       id: 12347,
@@ -30,7 +32,7 @@ const AllOrders = () => {
       items: "Party Package (10 Pots)",
       status: "out-for-delivery",
       date: "2023-08-13",
-      address: "789 Beach View, Goa"
+      address: "789 Beach View, Goa",
     },
     {
       id: 12348,
@@ -38,19 +40,26 @@ const AllOrders = () => {
       items: "3 Hookah Pots, Apple Flavor",
       status: "completed",
       date: "2023-08-12",
-      address: "321 Garden Lane, Bangalore"
-    }
+      address: "321 Garden Lane, Bangalore",
+    },
   ];
 
   // Status display configuration
   const statusConfig = {
-    pending: { label: "Pending", color: "#ffd700" },
+    Pending: { label: "Pending", color: "#ffd700" },
     preparing: { label: "Preparing", color: "#0fa3b1" },
     "out-for-delivery": { label: "Out for Delivery", color: "#27ae60" },
     delivered: { label: "Delivered", color: "#2ecc71" },
     completed: { label: "Completed", color: "#2ecc71" },
-    cancelled: { label: "Cancelled", color: "#e74c3c" }
+    cancelled: { label: "Cancelled", color: "#e74c3c" },
   };
+
+  useEffect(() => {
+    (async () => {
+     const orderRes= await getAllOrder();
+     setAllOrders(orderRes);
+    })();
+  }, []);
 
   return (
     <div className="main">
@@ -58,9 +67,9 @@ const AllOrders = () => {
 
       <div className="ordersSection">
         <div className="filtersSection">
-          <input 
-            type="text" 
-            placeholder="Search orders..." 
+          <input
+            type="text"
+            placeholder="Search orders..."
             className="searchInput"
           />
           {/* <select className="statusFilter">
@@ -72,24 +81,30 @@ const AllOrders = () => {
         </div>
 
         <div className="ordersList">
-          {orders.map(order => (
-            <div className="orderCard" key={order.id}>
+          {allOrders.map((order) => (
+            <div className="orderCard" >
               <div className="orderHeader">
                 <div className="orderMeta">
-                  <span className="orderId">#{order.id}</span>
-                  <span className="orderDate">{order.date}</span>
+                  {/* <span className="orderId">#{order.orderNumber}</span> */}
+                  {/* <span className="orderDate">{order.date}</span> */}
                 </div>
-                <span 
+                {/* <span
                   className="statusBadge"
                   style={{ backgroundColor: statusConfig[order.status].color }}
                 >
                   {statusConfig[order.status].label}
-                </span>
+                </span> */}
               </div>
               <div className="orderDetails">
-                <p><strong>Customer:</strong> {order.customer}</p>
-                <p><strong>Items:</strong> {order.items}</p>
-                <p><strong>Address:</strong> {order.address}</p>
+                <p>
+                  {/* <strong>Customer:</strong> {order.customer.name} */}
+                </p>
+                <p>
+                  {/* <strong>Items:</strong> {order.items} */}
+                </p>
+                <p>
+                  {/* <strong>Address:</strong> {order.address.plotApartment} */}
+                </p>
                 <div className="orderActions">
                   <button className="viewButton">View Details</button>
                   <button className="editButton">Edit Status</button>
@@ -100,7 +115,7 @@ const AllOrders = () => {
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };

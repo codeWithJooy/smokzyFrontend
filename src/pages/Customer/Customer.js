@@ -3,8 +3,10 @@ import Footer from "../../components/Footer/Footer";
 import "../../style/global.css";
 import "../../style/Orders/CreateOrder.css";
 import { addNewCustomer } from "../../redux/action/customerAction";
+import { useHistory } from "react-router-dom";
 
 const Customer = () => {
+  const history=useHistory()
   const [customerStage, setCustomerStage] = useState(1);
   const [customerData, setCustomerData] = useState({
     name: "",
@@ -51,6 +53,8 @@ const Customer = () => {
       if (res) {
         console.log("Customer data to be submitted:", customerData);
         alert("Customer added successfully!");
+        history.push("/allcustomers");
+        
       }
       // For now, we'll just log the data and show a success message
 
@@ -66,6 +70,7 @@ const Customer = () => {
         pin: "",
       });
       setCustomerStage(1);
+      history.push("/allcustomers");
     } catch (error) {
       console.error("Error adding customer:", error);
       alert("Failed to add customer. Please try again.");

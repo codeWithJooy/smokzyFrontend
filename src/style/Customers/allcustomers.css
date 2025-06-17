@@ -1,0 +1,130 @@
+.customers-container {
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .customers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-customer-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+  
+  .add-customer-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .customers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+  .customer-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+  }
+  
+  .customer-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .customer-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+  }
+  
+  .customer-card-header h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .customer-id {
+    font-size: 12px;
+    color: #666;
+    background-color: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+  
+  .customer-details {
+    margin-bottom: 15px;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-bottom: 8px;
+  }
+  
+  .detail-label {
+    font-weight: 500;
+    color: #555;
+    min-width: 100px;
+  }
+  
+  .detail-value {
+    color: #333;
+    flex-grow: 1;
+  }
+  
+  .customer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .edit-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0b7dda;
+  }
+  
+  .delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+  }
+  
+  .delete-btn:hover {
+    background-color: #da190b;
+  }
+  
+  .no-customers {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 40px;
+    color: #666;
+    font-size: 18px;
+  }

@@ -70,7 +70,7 @@ const Dashboard = () => {
               <p>Users</p>
             </div>
           </div>
-          <div className="actionButton" onClick={()=>history.push("/orders")}>
+          <div className="actionButton" onClick={()=>history.push("/allcustomers")}>
             <div className="actionImage">
               <img src="assets/dashboard/completed.png" />
             </div>

@@ -15,3 +15,17 @@ export const addOrder = async (orderData) => {
   }
 };
 
+export const getAllOrder=async()=>{
+  try{
+    let headers=getHeaders();
+    const response=await orderApi.get("/",headers);
+    if(response.data.code===200){
+      console.log(response.data.data)
+      return response.data.data;
+    }else{
+      return [];
+    }
+  }catch(error){
+    console.log(error.message)
+  }
+}

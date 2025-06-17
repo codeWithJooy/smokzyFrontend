@@ -16,6 +16,7 @@ import EmployeeTaskView from "./pages/Employee/EmployeeTaskView";
 import AnalyticsDashboard from "./pages/Analytics/AnalyticsDashboard";
 import InventoryPage from "./pages/Inventory/InventoryPage";
 import Customer from "./pages/Customer/Customer";
+import AllCustomers from "./pages/Customer/AllCustomers";
 
 const AppContent = () => {
   const location = useLocation();
@@ -54,6 +55,7 @@ const AppContent = () => {
         <Route path="/analytics" component={AnalyticsDashboard} />
         <Route path="/inventory" component={InventoryPage} />
         <Route path="/addcustomer" component={Customer} />
+        <Route path="/allcustomers" component={AllCustomers}/>
       </Switch>
     </>
   );
