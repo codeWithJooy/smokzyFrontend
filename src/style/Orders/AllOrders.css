@@ -3,22 +3,28 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+
 }
 
-.filtersSection {
+.orderFiltersSection {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 25px;
-  
+  width:100%;
 }
-.searchInput{
-  width:100%
+.ordersearchInput{
+  width:50%!important;
+  padding:8px 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid yellow;
 }
-.statusFilter {
+.orderstatusFilter {
   width:40%!important;
-
+  border:1px solid yellow;
+  padding:8px 10px;
 }
 
 .ordersList {

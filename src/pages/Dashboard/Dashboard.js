@@ -1,13 +1,23 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import "../../style/global.css";
 import "../../style/dashboard.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import { useHistory } from "react-router-dom";
+import { getOrderCount } from "../../redux/action/orderAction";
 
 
 const Dashboard = () => {
   const history=useHistory();
+
+  const [count,setCount]=useState({})
+  useEffect(()=>{
+   (async()=>{
+    const countRes=await getOrderCount();
+    setCount(countRes);
+   })()
+  },[])
+
   return (
     <div className="main">
       <Header title={"Dashboard"}/>
@@ -18,7 +28,7 @@ const Dashboard = () => {
               <img src="assets/dashboard/pending.png" />
             </div>
             <div className="statText">
-              <p>15</p>
+              <p>{count.pending}</p>
             </div>
             <div className="statHeader">Pending Orders</div>
           </div>
@@ -27,7 +37,7 @@ const Dashboard = () => {
               <img src="assets/dashboard/progress.png" />
             </div>
             <div className="statText">
-              <p>15</p>
+              <p>{count.processing}</p>
             </div>
             <div className="statHeader">In Progress Orders</div>
           </div>
@@ -36,7 +46,7 @@ const Dashboard = () => {
               <img src="assets/dashboard/completed.png" />
             </div>
             <div className="statText">
-              <p>15</p>
+              <p>{count.completed}</p>
             </div>
             <div className="statHeader">Completed Orders</div>
           </div>

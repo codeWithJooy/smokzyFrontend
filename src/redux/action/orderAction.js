@@ -29,3 +29,18 @@ export const getAllOrder=async()=>{
     console.log(error.message)
   }
 }
+
+export const getOrderCount=async()=>{
+  try{
+    let headers=getHeaders();
+    const response=await orderApi.get("/count",headers);
+    if(response.data.code==200){
+      return response.data.data;
+    }else{
+      return [];
+    }
+
+  }catch(error){
+    console.log(error.message)
+  }
+}
