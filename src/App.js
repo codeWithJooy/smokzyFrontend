@@ -17,6 +17,7 @@ import AnalyticsDashboard from "./pages/Analytics/AnalyticsDashboard";
 import InventoryPage from "./pages/Inventory/InventoryPage";
 import Customer from "./pages/Customer/Customer";
 import AllCustomers from "./pages/Customer/AllCustomers";
+import Toasty from "./components/Toasty/Toasty";
 
 const AppContent = () => {
   const location = useLocation();
@@ -42,21 +43,23 @@ const AppContent = () => {
   return (
     <>
       {loading && <SmokeLoader />}
-      <Switch>
-        <Route path="/skeleton" component={Skeleton} />
-        <Route path="/create" component={CreateOrder} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/orders" component={AllOrders} />
-        <Route path="/orderdetails" component={OrderDetails} />
-        <Route path="/login" component={Login} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/employees" component={EmployeeManagement} />
-        <Route path="/employeetask" component={EmployeeTaskView} />
-        <Route path="/analytics" component={AnalyticsDashboard} />
-        <Route path="/inventory" component={InventoryPage} />
-        <Route path="/addcustomer" component={Customer} />
-        <Route path="/allcustomers" component={AllCustomers}/>
-      </Switch>
+      {!loading && 
+            <Switch>
+            <Route path="/skeleton" component={Skeleton} />
+            <Route path="/create" component={CreateOrder} />
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/orders" component={AllOrders} />
+            <Route path="/orderdetails" component={OrderDetails} />
+            <Route path="/login" component={Login} />
+            <Route path="/signup" component={Signup} />
+            <Route path="/employees" component={EmployeeManagement} />
+            <Route path="/employeetask" component={EmployeeTaskView} />
+            <Route path="/analytics" component={AnalyticsDashboard} />
+            <Route path="/inventory" component={InventoryPage} />
+            <Route path="/addcustomer" component={Customer} />
+            <Route path="/allcustomers" component={AllCustomers}/>
+          </Switch>}
+          <Toasty/>
     </>
   );
 };
