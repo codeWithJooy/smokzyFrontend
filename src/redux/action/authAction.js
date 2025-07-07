@@ -1,6 +1,7 @@
 import { authApi } from "../../api";
 import { CodeAnalogy } from "../../components/Toasty/Toasty";
-import { getHeaders } from "./actionHelper";
+import { USER_LOGIN } from "../actionTypes/userTypes";
+import { dispatchAction, getHeaders } from "./actionHelper";
 import { updateToast } from "./toastActions";
 
 export const signup = async (formData) => {
@@ -22,12 +23,13 @@ export const login = async (formData) => {
     let headers = getHeaders();
     const response = await authApi.post("/login", formData, headers);
     if (response.data.code == 200) {
+      dispatchAction(USER_LOGIN,response.data.data)
       updateToast({
         code:CodeAnalogy.SUCCESS,
         title:"Login Successfull",
         message:"Welcome to Smokzy",
       })
-      return response.data.user;
+      return response.data.data;
     } else {
       return false;
     }

@@ -1,12 +1,14 @@
 // src/pages/Employees/Management.js
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import "../../style/Employees/Management.css";
 import Footer from "../../components/Footer/Footer";
 
 import { addUser, getUsers } from "../../redux/action/userAction";
-
+import { getOrderByParams } from "../../redux/action/orderAction";
 
 const EmployeeManagement = () => {
+  const user = useSelector((state) => state.USER);
   const [searchQuery, setSearchQuery] = useState("");
   const [roleFilter, setRoleFilter] = useState("all");
   const [showAddModal, setShowAddModal] = useState(false);
@@ -19,7 +21,7 @@ const EmployeeManagement = () => {
     status: "active",
   });
   const [employees, setEmployees] = useState([]);
-  const [forceUpdate,setForceUpdate]=useState(true)
+  const [forceUpdate, setForceUpdate] = useState(true);
 
   const filteredEmployees = employees?.filter((emp) => {
     const matchesSearch =
@@ -41,11 +43,14 @@ const EmployeeManagement = () => {
   };
 
   useEffect(() => {
-    if(!forceUpdate) return;
+    if (!forceUpdate) return;
     (async () => {
-      const data = await getUsers()
+      const [data, order] = await Promise.allSettled([
+        getUsers(),
+        getOrderByParams(user.uuid)
+      ]);
       setEmployees(data);
-      setForceUpdate(false)
+      setForceUpdate(false);
     })();
   }, [forceUpdate]);
 
