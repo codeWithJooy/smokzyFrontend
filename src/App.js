@@ -19,6 +19,7 @@ import Customer from "./pages/Customer/Customer";
 import AllCustomers from "./pages/Customer/AllCustomers";
 import Toasty from "./components/Toasty/Toasty";
 import EditOrder from "./pages/Employee/EditOrder";
+import Splash from "./pages/Splash/Splash";
 
 const AppContent = () => {
   const location = useLocation();
@@ -60,6 +61,7 @@ const AppContent = () => {
             <Route path="/inventory" component={InventoryPage} />
             <Route path="/addcustomer" component={Customer} />
             <Route path="/allcustomers" component={AllCustomers}/>
+            <Route path="/" component={Splash}/>
           </Switch>}
           <Toasty/>
     </>

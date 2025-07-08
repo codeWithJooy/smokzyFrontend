@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import "../../style/Employees/Management.css";
+import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 import { addUser, getUsers } from "../../redux/action/userAction";
@@ -45,10 +46,7 @@ const EmployeeManagement = () => {
   useEffect(() => {
     if (!forceUpdate) return;
     (async () => {
-      const [data, order] = await Promise.allSettled([
-        getUsers(),
-        getOrderByParams(user.uuid)
-      ]);
+      const data=await getUsers()
       setEmployees(data);
       setForceUpdate(false);
     })();
@@ -56,18 +54,7 @@ const EmployeeManagement = () => {
 
   return (
     <div className={`main ${showAddModal ? "blur-background" : ""}`}>
-      <div className="header">
-        <div className="hamburger">
-          <img src="assets/common/hamburger.png" alt="menu" />
-        </div>
-        <div className="headerText">
-          <p>Employee Management</p>
-        </div>
-        <div className="headerNotification">
-          <img src="assets/common/bell.png" alt="notifications" />
-          <img src="assets/common/settings.png" alt="settings" />
-        </div>
-      </div>
+       <Header title={"Employees"}/>
       <div className="managementContainer">
         <div className="managementHeader">
           <div className="controls">

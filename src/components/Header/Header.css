@@ -1,0 +1,96 @@
+.header{
+    max-width:100%;
+    height:60px;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    position:relative;
+}
+.hamburger{
+    width:10%;
+}
+.headerText{
+    width:60%;
+}
+.headerText p{
+    font-size: 18px;
+    font-weight:bold;
+    color: #0fa3b1;
+}
+.headerNotification{
+    width:30%;
+    display: flex;
+    justify-content: flex-end
+}
+.headerNotification img{
+    margin:0px 5px;
+}
+.sidebarSection{
+  position: fixed;
+  top:0;
+  left:0;
+  width:55%;
+  height:100vh;
+  z-index:9999;
+  padding:20px 10px;
+  background-color: #555b6e;
+}
+.sidebarClose{
+    position: absolute;
+    top:20px;
+    right:20px;
+    width:15px;
+    height:15px;
+}
+.userSection{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.userImage{
+    width:20%;
+}
+.userImage img{
+   width:40px;
+   height:40px;
+}
+.userDetails{
+    width:80%;
+    line-height: .5rem;
+}
+.userName{
+    width:100%;
+}
+.userName p{
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffd6ba
+}
+.userNumber p{
+    font-size: 14px;
+    font-weight: bold;
+    color:#faf9f9;
+}
+.sidebarLink{
+    margin:30px 0px;
+}
+.sidebarLinkSection{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.linkImage{
+    width:20%;
+}
+.linkImage img{
+    width:30px;
+    height:30px;
+}
+.linkText p{
+    font-size: 16px;
+    font-weight: bold;
+    color:#ffd6ba
+}

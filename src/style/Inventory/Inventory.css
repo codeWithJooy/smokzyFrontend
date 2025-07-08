@@ -10,7 +10,7 @@
     margin-bottom: 20px;
   }
   .inventoryContainer{
-    padding:20px;
+    padding:0px 20px;
   }
   .add-button {
     padding: 8px 16px;
@@ -31,7 +31,7 @@
   }
   
   .summary-card {
-    background: white;
+    background: transparent;
     padding: 15px;
     border-radius: 8px;
     border: 1px solid #eddea4;
@@ -41,7 +41,7 @@
   
   .summary-card h3 {
     margin: 0 0 10px 0;
-    color: #2d3047;
+    color: #ffd6ba;
     font-size: 1rem;
   }
   
@@ -53,8 +53,8 @@
   }
   
   .chart-container {
-    background: white;
-    padding: 20px;
+    background: transparent;
+    padding: 20px 20px 10px;
     border-radius: 8px;
     border: 1px solid #eddea4;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -71,16 +71,17 @@
   }
   
   .inventory-table {
-    background: white;
+    background: transparent;
     padding: 20px;
     border-radius: 8px;
     border: 1px solid #eddea4;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
   }
   
   .inventory-table h3 {
     margin: 0 0 15px 0;
-    color: #2d3047;
+    color: #ffd6ba;
   }
   
   table {
@@ -92,15 +93,17 @@
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #eddea4;
+    color:#faf9f9
   }
   
   th {
-    background: #f9f7f3;
+    background: transparent;
     color: #0fa3b1;
   }
   
   tr.critical {
-    background: #ffebee;
+    background: transparent;
+    color:#faf9f9
   }
   
   tr.warning {

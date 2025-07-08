@@ -1,17 +1,22 @@
 /* Auth.css */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&family=Roboto&display=swap");
+
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #eddea4;
+    background-color: #fff;
+    background-image: url(../../public/assets/common/background.png);
+    background-size: cover; /* This ensures the image covers the entire container */
+    background-position: center; /* This centers the image */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
   }
   
   .auth-card {
-    background: #f9f7f3;
+    background: transparent;
     padding: 2rem;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 400px;
     margin: 1rem;
@@ -23,6 +28,7 @@
     color: #0fa3b1;
     text-align: center;
     line-height: 1rem;
+    font-family: "Roboto";
   }
   
   .auth-row {
@@ -32,14 +38,15 @@
   .auth-row label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #f7a072;
+    color: #216869;
     font-weight: 500;
   }
   
   .auth-row input {
     width: 90%;
     padding: 0.8rem;
-    border: 1px solid #eddea4;
+    background-color: #dce1de;
+    border:none;
     border-radius: 10px;
     font-size: 1rem;
   }

@@ -23,13 +23,16 @@
     border: 1px solid #eddea4;
     border-radius: 15px;
     width: 200px;
+    background-color: transparent;
+    color:#bee3db;
   }
   
   .filterSelect {
     padding: 8px 15px;
     border: 1px solid #eddea4;
     border-radius: 15px;
-    background: white;
+    background: transparent;
+    color:#fff;
   }
   
   .addButton {

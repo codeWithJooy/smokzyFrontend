@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import Modal from "react-modal";
+import Header from "../../components/Header/Header"
 import "../../style/Inventory/Inventory.css";
 import "../../style/global.css";
+import Footer from "../../components/Footer/Footer";
 // Initialize modal (required for react-modal)
 Modal.setAppElement("#root");
 
@@ -96,18 +98,7 @@ const InventoryPage = () => {
 
   return (
     <div className="main">
-      <div className="header">
-        <div className="hamburger">
-          <img src="assets/common/hamburger.png" alt="menu" />
-        </div>
-        <div className="headerText">
-          <p>Inventory Management</p>
-        </div>
-        <div className="headerNotification">
-          <img src="assets/common/bell.png" alt="notifications" />
-          <img src="assets/common/settings.png" alt="settings" />
-        </div>
-      </div>
+      <Header title={"Inventory"}/>
       <div className="inventoryContainer">
         <div className="controls">
           <input
@@ -147,25 +138,6 @@ const InventoryPage = () => {
             </p>
           </div>
         </div>
-
-        {/* Inventory Chart */}
-        <div className="chart-container">
-          <h3>Stock Levels</h3>
-          <div className="chart-wrapper">
-            <Bar
-              data={chartData}
-              options={{
-                responsive: true,
-                scales: {
-                  y: {
-                    beginAtZero: true,
-                  },
-                },
-              }}
-            />
-          </div>
-        </div>
-
         {/* Inventory Table */}
         <div className="inventory-table">
           <h3>Inventory Items</h3>
@@ -209,8 +181,27 @@ const InventoryPage = () => {
             </tbody>
           </table>
         </div>
-      </div>
+        {/* Inventory Chart */}
+        <div className="chart-container">
+          <h3>Stock Levels</h3>
+          <div className="chart-wrapper">
+            <Bar
+              data={chartData}
+              options={{
+                responsive: true,
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+              }}
+            />
+          </div>
+        </div>
 
+
+      </div>
+      <Footer/>
       {/* Add Inventory Modal */}
       <Modal
         isOpen={isModalOpen}

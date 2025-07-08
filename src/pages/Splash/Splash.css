@@ -1,0 +1,25 @@
+.splashMain {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+    background-image: url(../../../public/assets/common/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.splashMain img {
+    width: 360px;
+    height: 360px;
+    opacity: 0; /* Start invisible */
+    animation: fadeIn 500ms ease-in 20ms forwards; /* Smooth fade-in */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
