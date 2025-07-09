@@ -45,16 +45,22 @@
   .auth-row input {
     width: 90%;
     padding: 0.8rem;
-    background-color: #dce1de;
-    border:none;
-    border-radius: 10px;
+    background-color: transparent;
+    border: 1px solid #faf9f9;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    color:#ffd6ba;
+    
     font-size: 1rem;
+    
   }
   
   .auth-row input:focus {
     outline: none;
-    border-color: #0fa3b1;
-    box-shadow: 0 0 0 2px rgba(15, 163, 177, 0.2);
+    border-color: none;
+    box-shadow:  0 0 5px #ffd6ba;
+    border-radius: 10px;
   }
   
   .auth-button {
@@ -77,7 +83,7 @@
   .auth-link {
     text-align: center;
     margin-top: 1.5rem;
-    color: #2d3047;
+    color: #faf9f9;
   }
   
   .auth-link a {
